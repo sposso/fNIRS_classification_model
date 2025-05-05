@@ -9,7 +9,7 @@ To train the decoders, we used the implementation provided by Scikit-learn.. The
 
 ### Selected time window 
 
-We selected a time window that ranged from stimulus onset to 18 seconds. This time window was chosen to encompass the 12.5 seconds during which participants perceived the audio stimulus and the additional $\sim$5 seconds required for the hemodynamic response to peak after stimulus onset
+We selected a time window that ranged from stimulus onset to 18 seconds. This time window was chosen to encompass the 12.5 seconds during which participants perceived the audio stimulus and the additional ~5 seconds required for the hemodynamic response to peak after stimulus onset
 
 ![Results of the SVC and LDA models](https://github.com/sposso/fNIRS_classification_model/blob/main/0_18/_folder_subj_0/summary.png)
 
