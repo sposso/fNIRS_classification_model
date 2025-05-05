@@ -18,10 +18,14 @@ To get the results, you only have to run the Jupyter notebook **train_function.i
 ![Results of the SVC and LDA models](https://github.com/sposso/fNIRS_classification_model/blob/main/0_18/_folder_subj_0/summary.png)
 
 
-### 📈 AUC Table
+### 📈 AUC Table (subject 0)
 
 (Standard deviation from cross-validation)
 
 | Dataset     | Chance level | LDA (sd)     | SVC (sd)     |
 |:-----------:|:------------:|:------------:|:------------:|
 | audio_study | 0.5          | 0.792 (0.167)| 0.758 (0.172)|
+
+## Topographic map of the relevant features learned by the support vector classifier ( SVC).
+
+
