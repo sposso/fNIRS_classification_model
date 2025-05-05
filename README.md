@@ -1,6 +1,6 @@
 # fNIRS_classification_model
-This repostiry contains the code required to train an SVM and LDA model to distinguish between perceived speech and silence from fNIRS  signals.
-The data used is a publicly available dataset from the study "The use of broad vs restricted regions of interest in functional near-infrared spectroscopy for measuring cortical activation to auditory-only and visual-only speech". For more details about the data, you can check this [description](https://github.com/sposso/fNIRS-preprocessing-guide). 
+This repository contains the code for training Support Vector Machine (SVM) and Linear Discriminant Analysis (LDA) models to classify perceived speech versus silence using fNIRS signals.
+The data used is publicly available from the study ***"The use of broad vs restricted regions of interest in functional near-infrared spectroscopy for measuring cortical activation to auditory-only and visual-only speech"***. For more details about the dataset and the preprocessing steps, please refer to this [description](https://github.com/sposso/fNIRS-preprocessing-guide). 
 
 ## Experiment settings 
 The dataset comprises auditory-only and resting condition classes, with 18 and 10 trials, respectively. To address this class imbalance, we applied the Adaptive Synthetic (ADASYN) sampling method \cite{he2008adaptive} to oversample the minority class. Given the imbalance, model performance was evaluated using the AUC metric instead of accuracy, as AUC is more sensitive to false positives and negatives.
