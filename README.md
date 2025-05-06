@@ -28,4 +28,6 @@ To get the results, you only have to run the Jupyter notebook **train_function.i
 
 ## Topographic map of the relevant features learned by the support vector classifier ( SVC).
 
+We also visualize learned features from the linear SVC in a topographic map format, focusing on the time intervals where more feature coefficients > 0.8 . To determine the relevant window time, we first sum the number of features with values $\geq 0.8 $ across the spatial dimension. Next, we apply a mean filter ( $window size = 2 s$) to smooth the temporal profile and compute the average counts over time. Finally, we identify the target interval by finding the intersection between 80 \% of the maximum value and the time axis. Notably, all participants exhibit asymmetrical patterns across both hemispheres, particularly in the relevant channels highlighted in red. This asymmetry suggests potential left lateralization in the decoding task's neural processes at specific times. We also see that the HbO features are most relevant when the stimulus ends, and the opposite is true for HbR features.
+
 
