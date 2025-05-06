@@ -1,0 +1,11 @@
+dataset;model;fold;AUC;hyperparameters
+audio_study;LDA;1;1.0;"None"
+audio_study;LDA;2;1.0;"None"
+audio_study;LDA;3;0.875;"None"
+audio_study;LDA;4;1.0;"None"
+audio_study;LDA;5;1.0;"None"
+audio_study;SVC;1;1.0;"0.01"
+audio_study;SVC;2;1.0;"0.001"
+audio_study;SVC;3;0.875;"0.001"
+audio_study;SVC;4;1.0;"0.001"
+audio_study;SVC;5;1.0;"0.01"
