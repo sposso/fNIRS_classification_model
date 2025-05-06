@@ -19,12 +19,11 @@ To get the results, you only have to run the Jupyter notebook **train_function.i
 
 
 ### 📈 AUC Table (subject 0)
-
 (Standard deviation (sd) from cross-validation)
 
 | Dataset     | Chance level | LDA (sd)     | SVC (sd)     |
 |:-----------:|:------------:|:------------:|:------------:|
-| audio_study | 0.5          | 0.792 (0.167)| 0.758 (0.172)|
+| audio_study | 0.5          | 0.767 (0.162)| 0.758 (0.172)|
 
 ## Topographic map of the relevant features the linear support vector classifier ( SVC) learned.
 
