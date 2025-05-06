@@ -20,22 +20,22 @@ To get the results, you only have to run the Jupyter notebook **train_function.i
 
 ### 📈 AUC Table (subject 0)
 
-(Standard deviation from cross-validation)
+(Standard deviation (sd) from cross-validation)
 
 | Dataset     | Chance level | LDA (sd)     | SVC (sd)     |
 |:-----------:|:------------:|:------------:|:------------:|
 | audio_study | 0.5          | 0.792 (0.167)| 0.758 (0.172)|
 
-## Topographic map of the relevant features the support vector classifier ( SVC) learned.
+## Topographic map of the relevant features the linear support vector classifier ( SVC) learned.
 
-We also visualize learned features from the linear SVC in a topographic map format, focusing on the time intervals where more feature coefficients > 0.8 . To determine the relevant window time, we first sum the number of features with values $\geq 0.8 $ across the spatial dimension. Next, we apply a mean filter ( $window size = 2 s$) to smooth the temporal profile and compute the average counts over time. Finally, we identify the target interval by finding the intersection between 80 \% of the maximum value and the time axis. Notably, all participants exhibit asymmetrical patterns across both hemispheres, particularly in the relevant channels highlighted in red. This asymmetry suggests potential left lateralization in the decoding task's neural processes at specific times. We also see that the HbO features are most relevant when the stimulus ends, and the opposite is true for HbR features.
+We also visualize learned features from the linear SVC in a topographic map format, focusing on the time intervals where more feature coefficients > 0.8. To determine the relevant window time, we first sum the number of features with values $\geq 0.8 $ across the spatial dimension. Next, we apply a mean filter ( $window size = 2 s$) to smooth the temporal profile and compute the average counts over time. Finally, we identify the target interval by finding the intersection between 80 \% of the maximum value and the time axis. Notably, all participants exhibit asymmetrical patterns across both hemispheres, particularly in the relevant channels highlighted in red. This asymmetry suggests potential left lateralization in the decoding task's neural processes at specific times. We also see that the HbO features are most relevant when the stimulus ends, and the opposite is true for HbR features.
 
 ### Procedure
 
 1. Reshape the learned features into a [channels × time points] format.![coefficient features learned by the linear SVC](https://github.com/sposso/fNIRS_classification_model/blob/main/Average_Figures_SVC/subject_0_weights.png)
 2. Split the coefficient features into HbO and HbR components for separate analysis, normalize each to the [0, 1] range, and apply a threshold to identify coefficients greater than 0.80.
    ![Binarized hbo coefficients](https://github.com/sposso/fNIRS_classification_model/blob/main/Average_Figures_SVC/subject_0_binary_weights.png)
-   ![Binarized hbr coefficients](https://github.com/sposso/fNIRS_classification_model/blob/main/Average_Figures_SVC/subject_0_binary_weights.png)
+   ![Binarized hbr coefficients](https://github.com/sposso/fNIRS_classification_model/blob/main/Average_Figures_SVC/subject_0_binary_weights_hbr.png)
 
 3. We first count the number of significant channels (coefficients > 0.8) and apply a mean filter with a 2-second window to smooth the temporal profile. Then, we compute the average count over time and identify the target interval by locating the intersection between 80% of the maximum value and the time axis.
    ![HbO threshold](https://github.com/sposso/fNIRS_classification_model/blob/main/Average_Figures_SVC/subject_0_Threshold_window_complete.png)
